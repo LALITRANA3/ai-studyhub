@@ -1,0 +1,14 @@
+#!/bin/sh
+# Maven Wrapper Script
+# Usage: ./mvnw spring-boot:run
+
+MAVEN_WRAPPER_VERSION="3.9.5"
+MAVEN_DOWNLOAD_URL="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/${MAVEN_WRAPPER_VERSION}/apache-maven-${MAVEN_WRAPPER_VERSION}-bin.tar.gz"
+
+if ! command -v mvn &> /dev/null; then
+  echo "Maven not found. Please install Maven from https://maven.apache.org/download.cgi"
+  echo "Or use: brew install maven (Mac) / sudo apt install maven (Ubuntu)"
+  exit 1
+fi
+
+exec mvn "$@"
